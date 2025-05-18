@@ -7,7 +7,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 
 // import { meals } from "../../../../public/meal";
 
-import fire from "@/assets/Fire.svg";
+import fire from "@/assets/fire.svg";
 import soup from "@/assets/soup.svg";
 import ricebowl from "@/assets/rice-bowl.svg";
 import meat from "@/assets/meat.svg";
