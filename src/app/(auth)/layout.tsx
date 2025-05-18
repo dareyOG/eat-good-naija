@@ -2,9 +2,23 @@ import Image from 'next/image';
 import nativeJollof from '../../../public/nativeJollof.png';
 import '@/app/globals.css';
 
+import { Crimson_Pro, Inter } from 'next/font/google';
+
+const crimsonPro = Crimson_Pro({
+  subsets: ['latin'],
+  variable: '--font-crimson-pro',
+  display: 'swap'
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter'
+});
+
 function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${crimsonPro.variable} ${inter.variable} font-sans`}>
       <body>
         <main className="grid grid-cols-1 lg:grid-cols-[2.5fr,1.2fr] h-screen">
           <Image

@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { buttonVariants } from './ui/button';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
@@ -25,7 +24,6 @@ const navLinks = [
 
 function NavLink() {
   const pathName = usePathname();
-  console.log(pathName);
 
   return (
     <ul className="flex justify-between items-center gap-x-[5rem]">
@@ -33,14 +31,12 @@ function NavLink() {
         const isActive = pathName === navLink.path || pathName.endsWith(navLink.path);
 
         return (
-          <li key={navLink.link} className="text-[1.6rem] capitalize">
+          <li key={navLink.link}>
             <Link
               href={navLink.path}
-              className={
-                buttonVariants({ variant: 'link' }) +
-                ' hover:no-underline ' +
-                `${isActive ? 'text-destructive' : ''}`
-              }
+              className={`text-[1.6rem] capitalize font-medium ${
+                isActive ? 'text-primary' : 'text-foreground'
+              } font-serif`}
             >
               {navLink.link}
             </Link>

@@ -6,7 +6,20 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      'activeTab': '#E5F0FF',
+      'divider': '#F1F1F4',
+      'menuTab': '#D1E9FF',
+      'cartPrice': '#101828',
+      'order': '#2F80ED3F'
+    },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-crimson-pro)'],
+        serif: ['var(--font-poppins)']
+      },
       backgroundImage: {
         'auth-bg': "url('/nativeJollof.png')",
       },
@@ -56,6 +69,9 @@ module.exports = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
         }
+      },
+      boxShadow: {
+        'order': '0 4px 4px 0 order',
       }
     },
     plugins: [tailwindcssAnimate],

@@ -1,17 +1,27 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import '@/app/globals.css';
 
 import MainHeader from '@/components/mainheader';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
+import { Crimson_Pro, Inter, Poppins } from 'next/font/google';
+
+const crimsonPro = Crimson_Pro({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-crimson-pro'
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter'
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  display: 'swap',
+  weight: '500'
 });
 
 export const metadata: Metadata = {
@@ -26,9 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${crimsonPro.variable} ${inter.variable} ${poppins.variable}`}>
         <MainHeader />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );

@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 function FormInput({
   id,
   type,
   icon,
   errorMessage,
-  disclaimer
+  disclaimer,
 }: {
-  id: 'name' | 'email' | 'phone' | 'password';
-  type: 'text' | 'email' | 'password';
+  id: "name" | "email" | "phone" | "password" | "confirmPassword";
+  type: "text" | "email" | "password" | "tel";
   icon: ReactNode;
   errorMessage: string;
   disclaimer?: string;
@@ -20,11 +20,15 @@ function FormInput({
         type={type}
         id={id}
         required
-        className="w-full focus:outline focus:outline-transparent focus-visible:ring-2 focus-visible:ring-primary focus-within:ring-offset-0 bg-secondary text-input rounded-[0.8rem] px-[1.2rem] py-[0.8rem] text-[1.6rem]"
+        className="focus:outline-transparent w-full rounded-[0.8rem] bg-secondary px-[1.2rem] py-[0.8rem] text-[1.6rem] text-input focus-within:ring-offset-0 focus:outline focus-visible:ring-2 focus-visible:ring-primary"
       />
       <div className="flex w-full justify-between">
         <p className="text-[1.2rem] text-input">{disclaimer}</p>
-        {errorMessage && <p className="text-destructive text-[1.2rem] text-end">{errorMessage}</p>}
+        {errorMessage && (
+          <p className="text-end text-[1.2rem] text-destructive">
+            {errorMessage}
+          </p>
+        )}
       </div>
     </div>
   );
