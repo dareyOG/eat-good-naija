@@ -1,42 +1,45 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   {
-    link: 'home',
-    path: '/'
+    link: "home",
+    path: "/",
   },
   {
-    link: 'services',
-    path: '/services'
+    link: "services",
+    path: "/services",
   },
   {
-    link: 'menu',
-    path: '/menu'
+    link: "menu",
+    path: "/menu",
   },
   {
-    link: 'contact',
-    path: '/contact'
-  }
+    link: "contact",
+    path: "/contact",
+  },
 ];
 
 function NavLink() {
   const pathName = usePathname();
 
   return (
-    <ul className="flex justify-between items-center gap-x-[5rem]">
-      {navLinks.map(navLink => {
-        const isActive = pathName === navLink.path || pathName.endsWith(navLink.path);
+    <ul className="flex items-center justify-between gap-x-[5rem]">
+      {navLinks.map((navLink) => {
+        const isActive =
+          pathName === navLink.path || pathName.endsWith(navLink.path);
 
         return (
           <li key={navLink.link}>
             <Link
               href={navLink.path}
-              className={`text-[1.6rem] capitalize font-medium ${
-                isActive ? 'text-primary' : 'text-foreground'
-              } font-serif`}
+              className={`text-[1.6rem] font-medium capitalize ${
+                isActive
+                  ? "text-primary hover:text-foreground/50"
+                  : "text-foreground hover:text-primary/50"
+              } font-serif transition-colors duration-300 ease-in`}
             >
               {navLink.link}
             </Link>

@@ -1,17 +1,17 @@
-import Image from 'next/image';
-import { Button } from './ui/button';
+import Image from "next/image";
+import { Button } from "./ui/button";
 
-import Google from '@/assets/Google.svg';
+import Google from "@/assets/Google.svg";
 
 function GoogleSignInBtn({ text }: { text: string }) {
   return (
     <div className="flex flex-col gap-[2.4rem]">
       <Button
-        variant={'secondary'}
+        variant={"secondary"}
         onClick={() => {
           // Handle Google sign-up here
         }}
-        className="flex gap-[0.8rem] w-full max-w-[43.6rem] h-[4.8rem] rounded-[0.8rem] py-[1.2rem] px-[1.6rem] focus:outline focus:outline-transparent focus-visible:ring-2 focus-visible:ring-primary focus-within:ring-offset-0 border border-border bg-white text-[1.4rem] font-normal"
+        className="bg-white mx-auto flex h-[4.8rem] w-full max-w-[43.6rem] gap-[0.8rem] rounded-[0.8rem] border border-border px-[1.6rem] py-[1.2rem] text-[1.4rem] font-normal focus-within:ring-offset-0 focus:outline focus:outline-transparent focus-visible:ring-2 focus-visible:ring-primary"
       >
         <Image src={Google} alt="google" width={24} height={24} />
         <span className="text-[1.4rem] text-accent-foreground">{text}</span>

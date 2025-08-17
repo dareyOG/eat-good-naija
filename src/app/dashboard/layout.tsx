@@ -20,19 +20,19 @@ function DashboardLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <div className="grid h-screen grid-cols-[12.1rem_1fr] gap-8">
+        <div className="flex">
+          {/* grid grid-cols-[12.1rem_1fr] */}
           <Sidebar />
-          <main>
+          <main className="flex-1">
             <Searchbar />
-            <section>
-              <Suspense
-                fallback={
-                  <p className="text-3xl uppercase text-primary">Loading...</p>
-                }
-              >
-                {children}
-              </Suspense>
-            </section>
+
+            <Suspense
+              fallback={
+                <p className="text-3xl uppercase text-primary">Loading...</p>
+              }
+            >
+              {children}
+            </Suspense>
           </main>
         </div>
       </body>

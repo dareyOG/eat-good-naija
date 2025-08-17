@@ -7,7 +7,7 @@ import NavLink from "./navLink";
 function NavHeader() {
   const router = useRouter();
   return (
-    <nav className="flex items-center justify-between gap-x-[10rem]">
+    <nav className="hidden items-center justify-between gap-x-[10rem] lg:flex">
       <NavLink />
       <ActionBtn
         btnTitle={"sign up"}

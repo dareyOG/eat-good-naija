@@ -1,13 +1,10 @@
-"use client";
-
-import Cart from "@/components/cart";
-import Invoice from "@/components/invoice";
+import HomeOrders from "@/components/home-orders";
 
 function Orders() {
   return (
-    <section className="flex gap-10">
-      <div className="no-scrollbar flex h-full max-h-[50rem] w-full max-w-[84rem] flex-col gap-[2.4rem] overflow-y-auto">
-        <div className="hover:shadow-order flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary">
+    <HomeOrders>
+      <div className="no-scrollbar flex h-full max-h-[50rem] w-full max-w-[84rem] flex-col gap-[2.4rem] overflow-y-auto md:px-[2rem]">
+        {/*  <div className="flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary hover:shadow-order">
           <div className="flex w-fit flex-col justify-between gap-[2.4rem]">
             <div className="flex items-center gap-[.4rem]">
               <span className="text-[1.8rem] font-medium text-secondary-foreground">
@@ -76,9 +73,8 @@ function Orders() {
               </span>
             </div>
           </div>
-        </div>
-        {/* duplicates */}
-        <div className="hover:shadow-order flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary">
+        </div> */}
+        {/*  <div className="flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary hover:shadow-order">
           <div className="flex w-fit flex-col justify-between gap-[2.4rem]">
             <div className="flex items-center gap-[.4rem]">
               <span className="text-[1.8rem] font-medium text-secondary-foreground">
@@ -147,8 +143,8 @@ function Orders() {
               </span>
             </div>
           </div>
-        </div>
-        <div className="hover:shadow-order flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary">
+        </div> */}
+        {/*  <div className="flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary hover:shadow-order">
           <div className="flex w-fit flex-col justify-between gap-[2.4rem]">
             <div className="flex items-center gap-[.4rem]">
               <span className="text-[1.8rem] font-medium text-secondary-foreground">
@@ -217,8 +213,8 @@ function Orders() {
               </span>
             </div>
           </div>
-        </div>
-        <div className="hover:shadow-order flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary">
+        </div> */}
+        {/*  <div className="flex max-w-[84rem] cursor-pointer justify-between rounded-[1.2rem] border border-transparent px-[1.6rem] py-[.8rem] hover:border-primary hover:shadow-order">
           <div className="flex w-fit flex-col justify-between gap-[2.4rem]">
             <div className="flex items-center gap-[.4rem]">
               <span className="text-[1.8rem] font-medium text-secondary-foreground">
@@ -287,13 +283,9 @@ function Orders() {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div className="">
-        <Cart />
-        <Invoice />
-      </div>
-    </section>
+    </HomeOrders>
   );
 }
 

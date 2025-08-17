@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import Logo from './logo';
-import NavHeader from './nav-header';
+import Logo from "./logo";
+import Navigation from "./navigation";
 
 function MainHeader() {
   return (
-    <header className="flex justify-between items-center px-[13rem] py-[1.6rem]">
-      <div className="flex gap-[0.8rem] items-center">
+    <header className="sticky left-0 right-0 top-0 flex items-center justify-between bg-background px-[1.5rem] py-[1.6rem] md:px-[2.5rem] lg:bg-transparent lg:px-[13rem] lg:backdrop-blur-3xl">
+      <div className="flex items-center gap-x-[0.8rem]">
         <Logo />
-        <span className="text-[2.4rem] capitalize text-primary font-bold text-nowrap font-mono">
-          {' '}
+        <span className="text-nowrap font-mono text-[2.4rem] font-bold capitalize text-primary">
+          {" "}
           eat good naija
         </span>
       </div>
-      <NavHeader />
+      <Navigation />
     </header>
   );
 }

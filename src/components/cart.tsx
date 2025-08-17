@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { useState } from "react";
@@ -24,7 +26,7 @@ function Cart() {
         </span>
       </div>
       <div className="">
-        <div className="no-scrollbar flex h-full max-h-[25rem] flex-col divide-y-2 divide-solid divide-divider overflow-y-auto">
+        <div className="no-scrollbar divide-divider flex h-full max-h-[25rem] flex-col divide-y-2 divide-solid overflow-y-auto">
           <div className="flex w-[30rem] items-center gap-[1.2rem] px-[1.2rem] py-[.8rem]">
             <Image src={efoRiro} alt="efo" className="w-[5.6rem]" />
             <div className="flex w-full flex-col gap-[1.2rem]">
@@ -63,7 +65,7 @@ function Cart() {
                   onClick={() => {
                     // edit request note
                   }}
-                  className="rounded-[.8rem] bg-activeTab text-primary hover:bg-primary hover:text-activeTab"
+                  className="bg-activeTab hover:text-activeTab rounded-[.8rem] text-primary hover:bg-primary"
                 >
                   {<Edit3 />}
                 </Button>
@@ -109,7 +111,7 @@ function Cart() {
                   onClick={() => {
                     // edit request note
                   }}
-                  className="rounded-[.8rem] bg-activeTab text-primary hover:bg-primary hover:text-activeTab"
+                  className="bg-activeTab hover:text-activeTab rounded-[.8rem] text-primary hover:bg-primary"
                 >
                   {<Edit3 />}
                 </Button>
@@ -154,7 +156,7 @@ function Cart() {
                   onClick={() => {
                     // edit request note
                   }}
-                  className="rounded-[.8rem] bg-activeTab text-primary hover:bg-primary hover:text-activeTab"
+                  className="bg-activeTab hover:text-activeTab rounded-[.8rem] text-primary hover:bg-primary"
                 >
                   {<Edit3 />}
                 </Button>
