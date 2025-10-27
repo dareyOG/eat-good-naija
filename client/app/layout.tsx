@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import { Crimson_Pro, Gabriela, Lustria } from 'next/font/google';
+import { Crimson_Pro, Gabriela, PT_Serif } from 'next/font/google';
 import './globals.css';
+import MainHeader from '@/components/MainHeader';
 
 const crimsonPro = Crimson_Pro({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-crimson-pro',
+  variable: '--font-crimson_pro',
 });
 
 const gabriela = Gabriela({
@@ -15,10 +16,10 @@ const gabriela = Gabriela({
   display: 'swap',
 });
 
-const lustria = Lustria({
+const ptSerif = PT_Serif({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-poppins',
+  variable: '--font-pt_serif',
   display: 'swap',
 });
 
@@ -35,9 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${crimsonPro.variable} ${gabriela.variable} ${lustria.variable} antialiased`}
+        className={`${crimsonPro.variable} ${gabriela.variable} ${ptSerif.variable} antialiased divide-y-2 divide-primary`}
       >
-        {children}
+        <MainHeader />
+        {/* {children} */}
       </body>
     </html>
   );
