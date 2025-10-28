@@ -1,9 +1,16 @@
 import Image from 'next/image';
 
-import ThaiHotPot from '@/assets/ThaiHotPot.svg';
-
 function Logo() {
-  return <Image src={ThaiHotPot} alt="logo" className="inline-block" />;
+  return (
+    <Image
+      src="/assets/ThaiHotPot.svg"
+      alt="logo"
+      width={32}
+      height={32}
+      priority
+      className="inline-block"
+    />
+  );
 }
 
 export default Logo;

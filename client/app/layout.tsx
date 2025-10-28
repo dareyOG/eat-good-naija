@@ -1,12 +1,17 @@
 import type { Metadata } from 'next';
-import { Crimson_Pro, Gabriela, PT_Serif } from 'next/font/google';
+
+import { Poppins, Gabriela, PT_Serif } from 'next/font/google';
+import localFont from 'next/font/local';
+
 import './globals.css';
+
 import MainHeader from '@/components/MainHeader';
 
-const crimsonPro = Crimson_Pro({
+const poppins = Poppins({
   subsets: ['latin'],
+  weight: '400',
+  variable: '--font-poppins',
   display: 'swap',
-  variable: '--font-crimson_pro',
 });
 
 const gabriela = Gabriela({
@@ -16,11 +21,16 @@ const gabriela = Gabriela({
   display: 'swap',
 });
 
-const ptSerif = PT_Serif({
+const pt_serif = PT_Serif({
   subsets: ['latin'],
   weight: '400',
   variable: '--font-pt_serif',
   display: 'swap',
+});
+
+const rublik = localFont({
+  src: '../fonts/rublik/rubik-bold-webfont.woff2',
+  variable: '--font-rublik',
 });
 
 export const metadata: Metadata = {
@@ -36,10 +46,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${crimsonPro.variable} ${gabriela.variable} ${ptSerif.variable}  antialiased`}
+        className={`${poppins.variable} ${gabriela.variable} ${pt_serif.variable} ${rublik.variable}  antialiased`}
       >
         <MainHeader />
-        <div className="pt-5 px-4 lg:px-10 min-h-screen">{children}</div>
+        <div className="pt-5 px-4 lg:px-10">{children}</div>
       </body>
     </html>
   );

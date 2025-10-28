@@ -2,14 +2,14 @@ import NavLink from './NavLink';
 
 function NavHeader() {
   const navLinks = [
-    { link: 'about', href: '/about' },
-    { link: 'menu', href: '/menu' },
-    { link: 'contact', href: '/contact' },
-    { link: 'reviews', href: '/reviews' },
+    { link: 'why us?', href: 'why-us' },
+    { link: 'services', href: 'services' },
+    { link: 'menu', href: 'menu' },
+    { link: 'contact', href: 'contact' },
   ];
   return (
     <nav className="hidden lg:block">
-      <ul className=" flex items-center capitalize gap-x-20">
+      <ul className=" flex items-center capitalize gap-x-14">
         {navLinks.map((link) => (
           <li key={link.link}>
             <NavLink href={link.href} link={link.link} />
