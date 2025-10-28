@@ -12,7 +12,7 @@ function NavLink({ link, href }: { link: string; href: string }) {
         href={href}
         className={`capitalize text-[2rem] ${
           path.startsWith(href) ? 'text-foreground' : 'text-primary'
-        } hover:opacity-65 font-medium`}
+        } lg:hover:opacity-65 font-medium`}
       >
         {link}
       </Link>

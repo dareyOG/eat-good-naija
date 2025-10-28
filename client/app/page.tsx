@@ -14,7 +14,7 @@ const lobsterTwo = localFont({
 function Home() {
   return (
     <section className="gap-x-8 md:grid lg:grid-cols-2">
-      <Image src={jollofFrame} alt="jollof frame" />
+      <Image src={jollofFrame} alt="jollof frame" priority />
 
       <div className="space-y-8 lg:col-start-1 lg:row-end-2 lg:flex lg:h-screen lg:items-center lg:justify-center">
         <div>

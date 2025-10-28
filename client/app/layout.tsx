@@ -39,7 +39,7 @@ export default function RootLayout({
         className={`${crimsonPro.variable} ${gabriela.variable} ${ptSerif.variable} antialiased divide-y-2 divide-primary`}
       >
         <MainHeader />
-        {/* {children} */}
+        <div className="pt-5">{children}</div>
       </body>
     </html>
   );

@@ -7,9 +7,8 @@ function NavHeader() {
     { link: 'contact', href: '/contact' },
     { link: 'reviews', href: '/reviews' },
   ];
-
   return (
-    <nav className="">
+    <nav className="hidden lg:block">
       <ul className=" flex items-center capitalize gap-x-20">
         {navLinks.map((link) => (
           <li key={link.link}>
