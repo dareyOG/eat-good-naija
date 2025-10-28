@@ -36,10 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${crimsonPro.variable} ${gabriela.variable} ${ptSerif.variable} antialiased divide-y-2 divide-primary`}
+        className={`${crimsonPro.variable} ${gabriela.variable} ${ptSerif.variable}  antialiased`}
       >
         <MainHeader />
-        <div className="pt-5">{children}</div>
+        <div className="pt-5 px-4 lg:px-10 min-h-screen">{children}</div>
       </body>
     </html>
   );

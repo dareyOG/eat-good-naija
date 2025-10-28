@@ -8,7 +8,7 @@ import NavDrawer from './NavDrawer';
 function MainHeader() {
   // sticky left-0 right-0 top-0
   return (
-    <header className="flex items-center justify-between px-4 lg:px-10 py-[1.6rem]">
+    <header className="flex items-center justify-between px-4 lg:px-10 py-[1.6rem] border-b-2 border-primary border-dotted">
       <Link href={'/'}>
         <div className="flex flex-col items-center gap-y-2">
           <Logo />
